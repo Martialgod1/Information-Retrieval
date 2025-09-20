@@ -20,7 +20,7 @@ This guide provides instructions for setting up a Docker-based development envir
 
 2. Install required packages:
    ```bash
-   brew install pylucene
+   brew install coady/tap/pylucene
    brew install python3
    ```
 
