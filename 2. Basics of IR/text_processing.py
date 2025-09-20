@@ -28,7 +28,8 @@ def normalize_text(text: str) -> str:
 
 def tokenize(text: str, use_lucene: bool = True) -> List[str]:
     if use_lucene and _HAS_LUCENE:
-        lucene.initVM(vmargs=["-Djava.awt.headless=true"])  # idempotent
+        if not lucene.getVMEnv():
+            lucene.initVM(vmargs=["-Djava.awt.headless=true"])
         analyzer = EnglishAnalyzer()
         stream = analyzer.tokenStream("field", StringReader(text))
         term_attr = stream.addAttribute(CharTermAttribute.class_)
