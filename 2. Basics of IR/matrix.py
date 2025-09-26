@@ -19,6 +19,7 @@ def term_document_matrix(corpus: Corpus, use_lucene: bool = True) -> Tuple[List[
         matrix.append(row)
     return terms, docs, matrix
 
+# TF–IDF = (term frequency weight) × (inverse document frequency). Typical IDF gives higher weight to terms that occur in fewer documents.
 
 def tf_idf_matrix(corpus: Corpus, use_lucene: bool = True) -> Tuple[List[str], List[str], List[List[float]]]:
     terms, docs, counts = term_document_matrix(corpus, use_lucene=use_lucene)
