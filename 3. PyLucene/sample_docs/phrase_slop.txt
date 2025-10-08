@@ -1,0 +1,1 @@
+Here we place vector and then after some words we mention the term space to allow phrase slop queries.

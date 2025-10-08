@@ -1,0 +1,1 @@
+This document mentions term weighting once to demonstrate axiomatic behavior with balanced frequency and typical length.

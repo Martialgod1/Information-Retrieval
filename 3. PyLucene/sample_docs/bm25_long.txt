@@ -1,0 +1,3 @@
+This is a longer document that discusses index compression in more detail. 
+While index compression can reduce storage, over-long documents may be penalized by BM25 length normalization depending on the value of b. 
+Here we mention index and compression but with many additional words to dilute term frequency impact relative to document length.

@@ -1,0 +1,1 @@
+inverted index powers many search engines and supports fast lookup.

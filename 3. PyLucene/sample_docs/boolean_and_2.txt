@@ -1,0 +1,1 @@
+the inverted list is crucial but without an index you cannot search efficiently.
