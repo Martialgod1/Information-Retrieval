@@ -102,7 +102,3 @@ Compute:
 - score(d, q)   = log P(language|d) + log P(model|d)
 
 ---
-
-### References
-- Zhai, Lafferty (2001): A Study of Smoothing Methods for Language Models Applied to Ad Hoc IR.
-- Ponte, Croft (1998): A Language Modeling Approach to Information Retrieval.

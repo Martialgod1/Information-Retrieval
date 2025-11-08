@@ -78,7 +78,7 @@ ap = mean( precision_at_k(i) for i where rels[i] == 1 )
 
 nDCG@k with graded relevance `g[i]`:
 ```text
-dcg  = sum( g[i] / log2(i+2) for i in 0..k-1 )
+dcg  (Discounted Cumulative Gain): = sum( g[i] / log2(i+2) for i in 0..k-1 )
 idcg = dcg of ideal sorted gains
 ndcg = dcg / idcg if idcg > 0 else 0
 ```
@@ -92,14 +92,6 @@ Use the PyLucene evaluation script to run queries and compute metrics:
 
 ```bash
 cd "3. PyLucene"
-
-# First, run without relevance to see what documents are retrieved
-docker-compose run --rm app python3 eval_with_pylucene.py \
-  --index /app/index \
-  --queries "vector space model" \
-  --similarity bm25 \
-  --topk 10
-
 # With relevance judgments by position (1=relevant, 0=not relevant for each rank)
 # Format: "query:rel1,rel2,rel3,..."
 docker-compose run --rm app python3 eval_with_pylucene.py \
@@ -143,7 +135,3 @@ from eval_metrics import precision_at_k, recall_at_k, average_precision, mean_av
 ```
 
 ---
-
-### References
-- Manning, Raghavan, Schütze: Introduction to Information Retrieval, Ch. 8, 11.
-- Voorhees, Harman (eds.): TREC Experimental Evaluation in Information Retrieval.

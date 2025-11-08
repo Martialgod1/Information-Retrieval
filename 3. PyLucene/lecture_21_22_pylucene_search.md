@@ -51,7 +51,3 @@ See more examples in `3. PyLucene/README.md` including phrase queries with slop,
 
 ---
 
-### Tips
-- Keep an eye on analysis chain (token filters) to match your query formulation.
-- Compare BM25 vs VSM vs Axiomatic vs LM results on the same queries to understand behavior.
-- Use small test corpora to iterate quickly; then scale up.
