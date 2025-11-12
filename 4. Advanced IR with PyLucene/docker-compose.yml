@@ -1,0 +1,12 @@
+services:
+  app:
+    build: .
+    volumes:
+      - .:/app
+      - ../3. PyLucene:/app/../3. PyLucene
+    environment:
+      - PYTHONPATH=/app
+    working_dir: /app
+    command: python3 relevance_feedback.py --help
+
+
